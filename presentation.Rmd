@@ -1,0 +1,198 @@
+---
+title: "Ditching R for Python"
+subtitle: "PyData Ann Arbor"
+author: "Clayton Yochum"
+date: "October 10, 2017"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# Who the hell am I?
+
+--
+- data science engineer @ Methods Consultants
+
+--
+- co-organizer of Ann Arbor R User Group
+
+--
+- co-maintainer of `rdrop2` package for using Dropbox from R
+
+--
+- diehard R fan
+
+--
+- not really a Python user
+
+---
+
+# The Problem
+
+--
+- finance client w/ killer data
+
+--
+- turn that data into a _trading strategy_
+
+--
+- be sure strategy is worth using
+
+--
+- (too proprietary to show much detail)
+
+
+---
+
+# The Process
+
+--
+- raw data ->
+
+--
+- clean features ->
+
+--
+- predictions from model(s) ->
+
+--
+- picks ->
+
+--
+- position changes ->
+
+--
+- evaluation
+
+---
+
+# What I was doing...
+
+--
+- writing a ton of custom R code
+
+--
+- so much code
+
+--
+- poorly tested code
+
+--
+- limited functionality
+
+---
+
+# But Then!
+
+--
+- PyData meetup, July 2017
+
+--
+- Gus Gordan from Quantopian
+
+--
+- open-source tools: `AlphaLens`, `Zipline`, `Pyfolio`
+
+--
+- was very clear they were doing a much better job of solving the same problems
+
+---
+
+# Incremental Change
+
+--
+- `Pyfolio` to evaluate existing backtests
+
+--
+- `Zipline` to turn _predicitons_ into _evaluated results_
+
+--
+- (haven't really used `AlphaLens` yet)
+
+---
+
+# Half & Half
+
+--
+- still doing modeling in R
+
+--
+- predictions in Zipline would take _too damn long_
+
+---
+
+# Benefits
+
+--
+- using battle-tested code
+
+--
+- so many more metrics & plots
+
+--
+- nice decoupling of _prediction_ from _strategy_
+
+---
+
+# Challenges
+
+--
+- Python is actually pretty different from R
+
+--
+- mixed codebases can be a pain
+
+--
+- `tidyverse` >>> `pandas`
+
+--
+- why do objects change type when you subset to one element?!?
+
+---
+
+# What's Next
+
+--
+- `Pachyderm`!
+
+--
+    - automated workflow
+
+--
+    - easily mix languages
+
+--
+    - Docker containers everywhere
+
+---
+class: middle
+
+# Lessons Learned
+
+--
+#### 1. use the right tool for the job
+
+--
+#### 2. learn from others
+
+--
+#### 3. 'NIH' will kill you
+
+---
+class: center, middle
+
+# Thanks!
+
+@claytonyochum
+
+claytonjy@gmail.com
+
+`claytonjy` on Github

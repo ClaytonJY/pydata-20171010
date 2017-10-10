@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ditching R for Python</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Clayton Yochum" />
+    <meta name="date" content="2017-10-10" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Ditching R for Python
+## PyData Ann Arbor
+### Clayton Yochum
+### October 10, 2017
+
+---
+
+
+
+
+# Who the hell am I?
+
+--
+- data science engineer @ Methods Consultants
+
+--
+- co-organizer of Ann Arbor R User Group
+
+--
+- co-maintainer of `rdrop2` package for using Dropbox from R
+
+--
+- diehard R fan
+
+--
+- not really a Python user
+
+---
+
+# The Problem
+
+--
+- finance client w/ killer data
+
+--
+- turn that data into a _trading strategy_
+
+--
+- be sure strategy is worth using
+
+--
+- (too proprietary to show much detail)
+
+
+---
+
+# The Process
+
+--
+- raw data -&gt;
+
+--
+- clean features -&gt;
+
+--
+- predictions from model(s) -&gt;
+
+--
+- picks -&gt;
+
+--
+- position changes -&gt;
+
+--
+- evaluation
+
+---
+
+# What I was doing...
+
+--
+- writing a ton of custom R code
+
+--
+- so much code
+
+--
+- poorly tested code
+
+--
+- limited functionality
+
+---
+
+# But Then!
+
+--
+- PyData meetup, July 2017
+
+--
+- Gus Gordan from Quantopian
+
+--
+- open-source tools: `AlphaLens`, `Zipline`, `Pyfolio`
+
+--
+- was very clear they were doing a much better job of solving the same problems
+
+---
+
+# Incremental Change
+
+--
+- `Pyfolio` to evaluate existing backtests
+
+--
+- `Zipline` to turn _predicitons_ into _evaluated results_
+
+--
+- (haven't really used `AlphaLens` yet)
+
+---
+
+# Half &amp; Half
+
+--
+- still doing modeling in R
+
+--
+- predictions in Zipline would take _too damn long_
+
+---
+
+# Benefits
+
+--
+- using battle-tested code
+
+--
+- so many more metrics &amp; plots
+
+--
+- nice decoupling of _prediction_ from _strategy_
+
+---
+
+# Challenges
+
+--
+- Python is actually pretty different from R
+
+--
+- mixed codebases can be a pain
+
+--
+- `tidyverse` &gt;&gt;&gt; `pandas`
+
+--
+- why do objects change type when you subset to one element?!?
+
+---
+
+# What's Next
+
+--
+- `Pachyderm`!
+
+--
+    - automated workflow
+
+--
+    - easily mix languages
+    
+--
+    - Docker containers everywhere
+
+---
+class: middle
+
+# Lessons Learned
+
+--
+#### 1. use the right tool for the job
+
+--
+#### 2. learn from others
+
+--
+#### 3. 'NIH' will kill you
+
+---
+class: center, middle
+
+# Thanks!
+
+@claytonyochum
+
+claytonjy@gmail.com
+
+`claytonjy` on Github
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {window.dispatchEvent(new Event('resize'));});
+(function() {var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler"); if (!r) return; s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }"; d.head.appendChild(s);})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
