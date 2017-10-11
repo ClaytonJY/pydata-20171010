@@ -1,8 +1,8 @@
 ---
 title: "Ditching R for Python"
-subtitle: "PyData Ann Arbor"
+subtitle: "(in Algorithmic Trading)"
 author: "Clayton Yochum"
-date: "October 10, 2017"
+date: "PyData Ann Arbor - October 10, 2017"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -96,7 +96,7 @@ options(htmltools.dir.version = FALSE)
 - PyData meetup, July 2017
 
 --
-- Gus Gordan from Quantopian
+- Gus Gordon from Quantopian
 
 --
 - open-source tools: `AlphaLens`, `Zipline`, `Pyfolio`
@@ -112,7 +112,7 @@ options(htmltools.dir.version = FALSE)
 - `Pyfolio` to evaluate existing backtests
 
 --
-- `Zipline` to turn _predicitons_ into _evaluated results_
+- `Zipline` to turn _predictions_ into _evaluated results_
 
 --
 - (haven't really used `AlphaLens` yet)
